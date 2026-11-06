@@ -1,4 +1,5 @@
-# LifeTrack 2.0
+# LifeTrack 
+
 
 A minimalist productivity app for Android built with Kotlin and Room Database.
 
