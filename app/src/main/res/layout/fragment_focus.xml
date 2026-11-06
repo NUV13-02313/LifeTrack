@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="?attr/ltBackground" android:padding="20dp">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:gravity="center_horizontal">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Deep Focus" android:textSize="28sp" android:textStyle="bold"
+            android:textColor="?attr/ltTextPrimary" android:layout_marginBottom="32dp" />
+
+        <!-- Task Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:hint="What are you focusing on?" android:layout_marginBottom="16dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/focusTaskInput" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Time Setters -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="16dp" android:gravity="center">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_marginEnd="8dp"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox" android:hint="Hours">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/focusHoursInput" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:inputType="number" android:text="0" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_marginStart="8dp"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox" android:hint="Minutes">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/focusMinutesInput" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:inputType="number" android:text="25" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <!-- Quick Presets -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center" android:layout_marginBottom="32dp">
+            <Button android:id="@+id/preset25" style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp" android:text="25m" />
+            <Button android:id="@+id/preset50" style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp" android:text="50m" />
+            <Button android:id="@+id/preset60" style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="1h" />
+        </LinearLayout>
+
+        <!-- Timer Display -->
+        <TextView android:id="@+id/focusTimerText" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="00:25:00"
+            android:textSize="64sp" android:textStyle="bold"
+            android:textColor="?attr/ltTextPrimary" android:layout_marginBottom="32dp"
+            android:fontFamily="monospace" />
+
+        <!-- Control Buttons -->
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center">
+
+            <Button android:id="@+id/startResumeButton"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_marginEnd="8dp"
+                android:text="Start" android:backgroundTint="?attr/ltAccent"
+                android:textColor="?attr/ltOnAccent" />
+
+            <Button android:id="@+id/pauseButton" style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_marginEnd="8dp"
+                android:text="Pause" android:enabled="false" />
+
+            <Button android:id="@+id/stopButton" style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="Stop"
+                android:textColor="?attr/ltTextSecondary" />
+        </LinearLayout>
+
+        <!-- Recent Sessions History -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Recent Focus Sessions" android:textSize="18sp"
+            android:textStyle="bold" android:textColor="?attr/ltTextPrimary"
+            android:layout_marginTop="40dp" android:layout_marginBottom="12dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/focusHistoryRecyclerView"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false" />
+
+    </LinearLayout>
+</ScrollView>

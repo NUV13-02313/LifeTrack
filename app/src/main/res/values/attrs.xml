@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="ltBackground" format="color" />
+    <attr name="ltSurface" format="color" />
+    <attr name="ltSurfaceVariant" format="color" />
+    <attr name="ltTextPrimary" format="color" />
+    <attr name="ltTextSecondary" format="color" />
+    <attr name="ltDivider" format="color" />
+    <attr name="ltAccent" format="color" />
+    <attr name="ltOnAccent" format="color" />
+    <attr name="ltOutline" format="color" />
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:background="?attr/ltSurface" android:padding="20dp">
+
+    <View android:layout_width="48dp" android:layout_height="4dp"
+        android:layout_gravity="center_horizontal" android:background="?attr/ltDivider"
+        android:layout_marginBottom="20dp" />
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="New Time Block" android:textSize="20sp" android:textStyle="bold"
+        android:textColor="?attr/ltTextPrimary" android:layout_marginBottom="16dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:hint="What will you do?" android:layout_marginBottom="16dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/blockTitleInput" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/startButton" style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Start: tap to set" android:gravity="start|center_vertical"
+        android:layout_marginBottom="8dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/endButton" style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="End: tap to set" android:gravity="start|center_vertical"
+        android:layout_marginBottom="8dp" />
+
+    <TextView android:id="@+id/durationPreview" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text=""
+        android:textSize="14sp" android:textColor="?attr/ltTextSecondary"
+        android:layout_marginBottom="24dp" />
+
+    <Button android:id="@+id/saveButton" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="Save"
+        android:backgroundTint="?attr/ltAccent" android:textColor="?attr/ltOnAccent"
+        android:layout_marginBottom="8dp" />
+
+    <Button android:id="@+id/cancelButton" style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Cancel" android:textColor="?attr/ltTextSecondary" />
+</LinearLayout>

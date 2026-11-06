@@ -1,0 +1,1 @@
+// Plugin versions are now managed directly in the app-level build.gradle.kts to prevent conflicts.
